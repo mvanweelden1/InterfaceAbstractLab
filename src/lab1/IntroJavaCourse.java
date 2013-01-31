@@ -3,10 +3,10 @@ package lab1;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Mark Van Weelden
  * @version     1.00
  */
-public class IntroJavaCourse {
+public class IntroJavaCourse extends Course{
     String courseName;
     private String courseNumber;
     private double credits;
@@ -45,6 +45,16 @@ public class IntroJavaCourse {
             System.exit(0);
         }
         this.setCredits(credits);
+    }
+
+    @Override
+    public void setCourseName(String courseName) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public String getCourseName() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

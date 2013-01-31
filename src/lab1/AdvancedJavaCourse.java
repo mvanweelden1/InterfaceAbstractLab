@@ -5,10 +5,10 @@ import javax.swing.JOptionPane;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Mark Van Weelden
  * @version     1.00
  */
-public class AdvancedJavaCourse {
+public class AdvancedJavaCourse extends Course {
     String courseName;
     private String courseNumber;
     private double credits;
@@ -60,6 +60,11 @@ public class AdvancedJavaCourse {
 
     public void setCourseNumber(String courseNumber) {
         this.courseNumber = courseNumber;
+    }
+
+    @Override
+    public double getCredits() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
 }
