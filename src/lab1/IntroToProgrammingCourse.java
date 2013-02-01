@@ -20,10 +20,6 @@ public class IntroToProgrammingCourse extends Course{
         this.setCredits(credits);
     }
 
-    public final String getCourseNumber() {
-        return courseNumber;
-    }
-
     public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -31,10 +27,6 @@ public class IntroToProgrammingCourse extends Course{
             System.exit(0);
         }
         this.courseNumber = courseNumber;
-    }
-
-    public final double getCredits() {
-        return credits;
     }
 
     public final void setCredits(double credits) {
@@ -45,11 +37,7 @@ public class IntroToProgrammingCourse extends Course{
         }
         this.credits = credits;
     }
-
-    public final String getCourseName() {
-        return courseName;
-    }
-
+    
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -57,6 +45,18 @@ public class IntroToProgrammingCourse extends Course{
             System.exit(0);
         }
         this.courseName = courseName;
+    }
+
+    public final String getCourseName() {
+        return courseName;
+    }
+    
+    public final String getCourseNumber() {
+        return courseNumber;
+    }
+    
+    public final double getCredits() {
+        return credits;
     }
 
     @Override
