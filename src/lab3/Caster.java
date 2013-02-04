@@ -1,12 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab3;
 
 /**
- *
- * @author Owner
+ *This interface just adds methods specific to the caster type of character.
+ * 
+ * @author Mark Van Weelden
  */
 public interface Caster extends Character{
     

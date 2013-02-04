@@ -3,7 +3,10 @@ package lab3;
 import javax.swing.JOptionPane;
 
 /**
- *
+ *This is the most specific subclass and therefor this is where all the properties
+ * and concrete methods are located.
+ * 
+ * All methods here are declared final as to adhere to the open/closed principle
  * @author Mark Van Weelden
  */
 public class Warrior implements Character{
@@ -11,7 +14,7 @@ public class Warrior implements Character{
     private String name;
     private int health;
     private int mana;
-    private final int MAX_HEALTH = 200;;
+    private final int MAX_HEALTH = 200;
     private final int MAX_MANA = 20;
     
 

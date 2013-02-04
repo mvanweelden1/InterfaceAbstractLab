@@ -1,14 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab3;
 
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Owner
+ *This is the most specific subclass and therefor this is where all the properties
+ * and concrete methods are located.
+ * 
+ * All methods here are declared final as to adhere to the open/closed principle
+ * @author Mark Van Weelden
  */
 public class Elementalist implements Caster{
     
@@ -54,7 +53,7 @@ public class Elementalist implements Caster{
         this.mana = mana;
     }
 
-    public void setAttribute(String attribute) {
+    public final void setAttribute(String attribute) {
         if(attribute == null || attribute.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: attribute cannot be null of empty string");
@@ -79,7 +78,7 @@ public class Elementalist implements Caster{
         return mana;
     }
 
-    public String getAttribute() {
+    public final String getAttribute() {
         return attribute;
     }
 
