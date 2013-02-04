@@ -4,6 +4,8 @@
  */
 package lab3;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Owner
@@ -14,6 +16,8 @@ public class Elementalist implements Caster{
     private int health;
     private int mana;
     private String attribute;
+    private final int MAX_HEALTH = 100;
+    private final int MAX_MANA = 100;
 
     public Elementalist(String name, int health, int mana, String attribute) {
         this.setName(name);
@@ -22,38 +26,69 @@ public class Elementalist implements Caster{
         this.setAttribute(attribute);
         
     }
-    
-    
-    public final void setAttribute(String attribute) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public final String getAttribute() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
+     
     public final void setName(String name) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(name == null || name.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: name cannot be null of empty string");
+            System.exit(0);
+        }
+        this.name = name;
     }
 
     public final void setHealth(int health) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(health < 1 || health > MAX_HEALTH) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: health must be in the range 1 to 200");
+            System.exit(0);
+        }
+        this.health = health;
     }
 
     public final void setMana(int mana) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(mana < 1 || mana > MAX_MANA) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: mana must be in the range 1 to 200");
+            System.exit(0);
+        }
+        this.mana = mana;
     }
 
+    public void setAttribute(String attribute) {
+        if(attribute == null || attribute.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: attribute cannot be null of empty string");
+            System.exit(0);
+        }
+        
+        
+        this.attribute = attribute;
+    }
+    
+    
+
     public final String getName() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return name;
     }
 
     public final int getHealth() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return health;
     }
 
     public final int getMana() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return mana;
     }
+
+    public String getAttribute() {
+        return attribute;
+    }
+
+    @Override
+    public String toString() {
+        return "Elementalist{" + "name=" + name + ", health=" + health 
+                + ", mana=" + mana + ", attribute=" + attribute 
+                + '}';
+    }
+    
     
 }

@@ -2,7 +2,7 @@ package lab3;
 
 /**
  *
- * @author Mark VAn Weelden
+ * @author Mark Van Weelden
  */
 public interface Character {
     

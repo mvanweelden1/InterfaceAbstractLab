@@ -61,5 +61,12 @@ public class Warrior implements Character{
     public final int getMana() {
         return mana;
     }
+
+    @Override
+    public String toString() {
+        return "Warrior{" + "name=" + name + ", health=" + health + ", mana=" 
+                + mana + '}';
+    }
+    
     
 }
