@@ -1,45 +1,86 @@
 package lab2;
 
+import javax.swing.JOptionPane;
+
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Mark Van Weelden
  * @version     1.00
  */
-public class IntroJavaCourse {
-    String courseName;
+public class IntroJavaCourse implements Course{
+    private String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
+    public IntroJavaCourse(String courseName, String courseNumber, double credits, String prerequisites) {
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
+        this.setPrerequisites(prerequisites);       
+    }
+
+    public final void setCourseNumber(String courseNumber) {
+        if(courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null or empty string");
+            System.exit(0);
+        }
         this.courseNumber = courseNumber;
     }
 
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-
-    public double getCredits() {
-        return credits;
-    }
-
-    public void setCredits(double credits) {
-        this.credits = credits;
-    }
-
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-
-    public void setPrerequisites(String prerequisites) {
+    public final void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null or empty string");
+            System.exit(0);
+        }
         this.prerequisites = prerequisites;
     }
 
+    public final void setCredits(double credits) {
+        if(credits < 0 || credits > 5.0) {
+            System.out.println(
+                    "Error: credits must be in the range 0.5 to 4.0");
+            System.exit(0);
+        }
+        this.credits = credits;
+    }
+
+    @Override
+    public final void setCourseName(String courseName) {
+        if(courseName == null || courseName.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseName cannot be null or empty string");
+            System.exit(0);
+        }
+        this.courseName = courseName;
+    }
+
+    public final String getCourseName() {
+        return courseName;
+    }
     
+     public final String getCourseNumber() {
+        return courseNumber;
+    }
+     
+    public final double getCredits() {
+        return credits;
+    }
+    
+    public final String getPrerequisites() {
+        return prerequisites;
+    }
+
+    @Override
+    public String toString() {
+        return "IntroJavaCourse{" + "courseName=" + courseName + ", courseNumber=" 
+                + courseNumber + ", credits=" + credits + ", prerequisites=" 
+                + prerequisites + '}';
+    }
+    
+    
+
 }
