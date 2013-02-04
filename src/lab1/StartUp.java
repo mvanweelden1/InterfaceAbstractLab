@@ -6,7 +6,7 @@ package lab1;
 
 /**
  *
- * @author Owner
+ * @author Mark Van Weelden
  */
 public class StartUp {
     
@@ -19,6 +19,12 @@ public class StartUp {
         Course course2 = new IntroJavaCourse("Intro to Java", "152-134", 4.0, "152-107 Intro to Programming");
         
         System.out.println(course2);
+        
+        Course course3 = new AdvancedJavaCourse("Advanced Java", "152-135", 4.0, "152-134 Intro to Java");
+        
+        System.out.println(course3);
+        
+        
     
     }
     
