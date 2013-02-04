@@ -1,11 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab1;
 
 /**
- *
+ *I started this project with the idea that I would try and populate the
+ * abstract class with abstract and concrete methods. I soon realized that I 
+ * didn't like the concrete inheritance at all. Mainly because of repeating the 
+ * properties in the sub-classes. Therefor, this lab has a class declared as
+ * abstract but actually acts as if it were an interface class.
+ * 
  * @author Mark Van Weelden
  */
 public class StartUp {
